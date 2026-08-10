@@ -657,3 +657,287 @@ body {
         padding: 20px;
     }
 }
+/* =========================
+   DEFAULT LIGHT MODE
+========================= */
+
+body {
+    background: #f8fafc;
+    color: #1e293b;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+
+/* Navbar */
+
+body.dark-mode .navbar {
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+    box-shadow: none;
+}
+
+body.dark-mode .navbar-left h2 {
+    color: #f8fafc;
+}
+
+body.dark-mode .navbar-left p {
+    color: #94a3b8;
+}
+
+
+/* Search */
+
+body.dark-mode .search-box {
+    background: #334155;
+}
+
+body.dark-mode .search-box input {
+    color: white;
+}
+
+body.dark-mode .search-box input::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode .search-icon {
+    color: #cbd5e1;
+}
+
+
+/* Theme Button */
+
+.theme-button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f5f9;
+    color: #334155;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.theme-button:hover {
+    background: #e2e8f0;
+}
+
+body.dark-mode .theme-button {
+    background: #334155;
+    color: #facc15;
+}
+
+body.dark-mode .theme-button:hover {
+    background: #475569;
+}
+
+
+/* Notification */
+
+body.dark-mode .notification {
+    color: #f8fafc;
+}
+
+
+/* Profile */
+
+body.dark-mode .profile-info h4 {
+    color: #f8fafc;
+}
+
+body.dark-mode .profile-info p {
+    color: #94a3b8;
+}
+
+body.dark-mode .profile-icon {
+    color: #2dd4bf;
+}
+
+
+/* Sidebar */
+
+body.dark-mode .sidebar {
+    background: #111827;
+    border-right: 1px solid #1e293b;
+}
+
+body.dark-mode .logo h2 {
+    color: #f8fafc;
+}
+
+body.dark-mode .menu a {
+    color: #cbd5e1;
+}
+
+body.dark-mode .menu a:hover {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+body.dark-mode .menu a.active {
+    background: #0f766e;
+    color: white;
+}
+
+body.dark-mode .logout a {
+    color: #cbd5e1;
+}
+
+body.dark-mode .logout a:hover {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+
+/* Main */
+
+body.dark-mode .main {
+    background: #0f172a;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+body.dark-mode .dashboard-header h1 {
+    color: #f8fafc;
+}
+
+body.dark-mode .dashboard-header p {
+    color: #94a3b8;
+}
+
+
+/* Dashboard Cards */
+
+body.dark-mode .summary-card,
+body.dark-mode .dashboard-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .summary-card p,
+body.dark-mode .transaction-info p {
+    color: #94a3b8;
+}
+
+body.dark-mode .summary-card h2,
+body.dark-mode .transaction-info h4,
+body.dark-mode .card-header h3 {
+    color: #f8fafc;
+}
+
+
+/* =========================
+   REPORTS
+========================= */
+
+body.dark-mode .reports {
+    background: #0f172a;
+}
+
+body.dark-mode .reports-header h1 {
+    color: #f8fafc;
+}
+
+body.dark-mode .reports-header p {
+    color: #94a3b8;
+}
+
+body.dark-mode .reports-header select {
+    background: #1e293b;
+    color: #f8fafc;
+    border-color: #334155;
+}
+
+body.dark-mode .report-card,
+body.dark-mode .report-box {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .report-card p,
+body.dark-mode .report-box-header p,
+body.dark-mode .spending-box > p {
+    color: #94a3b8;
+}
+
+body.dark-mode .report-card h2,
+body.dark-mode .report-box-header h3,
+body.dark-mode .spending-box h3 {
+    color: #f8fafc;
+}
+
+body.dark-mode .report-chart {
+    border-bottom-color: #334155;
+}
+
+body.dark-mode .report-legend {
+    color: #94a3b8;
+}
+
+body.dark-mode .spending-info {
+    color: #cbd5e1;
+}
+
+body.dark-mode .spending-info strong {
+    color: #f8fafc;
+}
+
+body.dark-mode .progress {
+    background: #334155;
+}
+
+
+.report-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.export-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.export-btn:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 650px) {
+    .report-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .report-actions select,
+    .export-btn {
+        width: 100%;
+    }
+}

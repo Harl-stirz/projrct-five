@@ -14,19 +14,55 @@ function Reports() {
         <div className="reports">
 
             {/* Header */}
-            <div className="reports-header">
-                <div>
-                    <h1>Reports</h1>
-                    <p>Analyze your financial performance.</p>
-                </div>
+           <div className="reports-header">
+    <div>
+        <h1>Reports</h1>
+        <p>Analyze your financial performance.</p>
+    </div>
 
-                <select>
-                    <option>This Month</option>
-                    <option>Last Month</option>
-                    <option>Last 3 Months</option>
-                    <option>This Year</option>
-                </select>
-            </div>
+    <div className="report-actions">
+        <select>
+            <option>This Month</option>
+            <option>Last Month</option>
+            <option>Last 3 Months</option>
+            <option>This Year</option>
+        </select>
+
+        <button
+            className="export-btn"
+            onClick={() => {
+                const csvData =
+                    "Category,Amount,Type\n" +
+                    "Income,8450,Income\n" +
+                    "Expenses,3240,Expense\n" +
+                    "Food,850,Expense\n" +
+                    "Transport,520,Expense\n" +
+                    "Bills,430,Expense\n" +
+                    "Shopping,310,Expense\n" +
+                    "Net Savings,5210,Savings";
+
+                const blob = new Blob([csvData], {
+                    type: "text/csv;charset=utf-8;"
+                });
+
+                const url = URL.createObjectURL(blob);
+
+                const link = document.createElement("a");
+                link.href = url;
+                link.download = "finance-report.csv";
+
+                document.body.appendChild(link);
+                link.click();
+
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+            }}
+        >
+            Export Report
+        </button>
+    </div>
+</div>
+            
 
             {/* Report Cards */}
             <div className="report-cards">

@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import Reports from "./components/Reports";
+import Transactions from "./components/Transactions";
 
 import "./App.css";
 
@@ -32,6 +33,11 @@ function App() {
                     <Route
                         path="/reports"
                         element={<Reports />}
+                    />
+
+                    <Route
+                        path="/transactions"
+                        element={<Transactions />}
                     />
 
                 </Routes>

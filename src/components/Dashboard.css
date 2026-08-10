@@ -1,6 +1,8 @@
 .dashboard {
     width: 100%;
     padding: 30px;
+    background: #f8fafc;
+    min-height: calc(100vh - 80px);
 }
 
 /* Header */
@@ -62,6 +64,7 @@
     justify-content: center;
 
     font-size: 22px;
+    flex-shrink: 0;
 }
 
 .card-icon.income {
@@ -169,20 +172,26 @@
     justify-content: space-around;
 
     border-bottom: 1px solid #e5e7eb;
+
     padding: 0 10px;
 }
 
 .bar-group {
     height: 100%;
+
     display: flex;
     align-items: flex-end;
+
     gap: 5px;
+
     position: relative;
 }
 
 .bar {
     width: 18px;
     border-radius: 5px 5px 0 0;
+
+    transition: height 0.3s ease;
 }
 
 .income-bar {
@@ -195,17 +204,23 @@
 
 .bar-group span {
     position: absolute;
+
     bottom: -25px;
     left: 50%;
+
     transform: translateX(-50%);
 
     color: #64748b;
     font-size: 12px;
 }
 
+
+/* Chart Legend */
+
 .chart-legend {
     display: flex;
     gap: 25px;
+
     margin-top: 35px;
 
     color: #64748b;
@@ -221,6 +236,7 @@
 .chart-legend i {
     width: 10px;
     height: 10px;
+
     border-radius: 50%;
 }
 
@@ -233,23 +249,54 @@
 }
 
 
-/* View All Button */
+/* Transaction Search */
 
-.card-header button {
-    border: none;
-    background: #eff6ff;
-    color: #2563eb;
+.transaction-search {
+    display: flex;
+    align-items: center;
 
-    padding: 8px 13px;
-    border-radius: 7px;
+    width: 100%;
 
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 9px;
+
+    padding: 11px 14px;
+
+    margin-bottom: 10px;
+
+    transition: 0.2s ease;
 }
 
-.card-header button:hover {
-    background: #dbeafe;
+.transaction-search svg {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.transaction-search:focus-within {
+    background: #ffffff;
+    border-color: #2563eb;
+}
+
+.transaction-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    margin-left: 10px;
+
+    color: #1e293b;
+
+    font-size: 14px;
+}
+
+.transaction-search input::placeholder {
+    color: #94a3b8;
 }
 
 
@@ -263,6 +310,7 @@
 .transaction {
     display: flex;
     align-items: center;
+
     gap: 12px;
 
     padding: 15px 0;
@@ -285,6 +333,8 @@
     justify-content: center;
 
     font-size: 15px;
+
+    flex-shrink: 0;
 }
 
 .transaction-icon.income {
@@ -299,21 +349,37 @@
 
 .transaction-info {
     flex: 1;
+    min-width: 0;
 }
 
 .transaction-info h4 {
     margin: 0;
+
     color: #334155;
+
     font-size: 14px;
 }
 
 .transaction-info p {
     margin: 4px 0 0;
+
     color: #94a3b8;
+
     font-size: 12px;
 }
 
 .transaction strong {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.no-transactions {
+    text-align: center;
+
+    padding: 30px 10px;
+
+    color: #94a3b8;
+
     font-size: 14px;
 }
 
@@ -321,6 +387,7 @@
 /* Responsive */
 
 @media (max-width: 1100px) {
+
     .summary-cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -330,7 +397,9 @@
     }
 }
 
+
 @media (max-width: 700px) {
+
     .dashboard {
         padding: 20px;
     }
@@ -342,4 +411,102 @@
     .dashboard-header h1 {
         font-size: 25px;
     }
+
+    .dashboard-card {
+        padding: 18px;
+    }
+
+    .chart-bars {
+        padding: 0;
+    }
+
+    .bar {
+        width: 14px;
+    }
+
+    .bar-group {
+        gap: 3px;
+    }
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+
+    width: 300px;
+    height: 42px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 25px;
+
+    padding: 0 14px;
+
+    transition: 0.2s ease;
+}
+
+.search-box:focus-within {
+    background: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.search-icon {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.search-box input {
+    flex: 1;
+
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    margin-left: 10px;
+
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+.clear-search {
+    border: none;
+    background: transparent;
+
+    color: #94a3b8;
+
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.clear-search:hover {
+    color: #ef4444;
+}
+
+.view-all-btn {
+    text-decoration: none;
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 8px 14px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.view-all-btn:hover {
+    background: #dbeafe;
+    color: #1d4ed8;
 }
