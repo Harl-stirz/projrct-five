@@ -1,0 +1,447 @@
+========================================
+   DELETE HISTORY PAGE
+======================================== */
+
+.delete-history-page {
+    padding: 30px;
+    background: #f5f7fb;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.delete-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.delete-history-header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #1f2937;
+}
+
+.delete-history-header p {
+    margin-top: 8px;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+/* ========================================
+   DELETED COUNT
+======================================== */
+
+.delete-history-count {
+    min-width: 120px;
+    padding: 18px 22px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    color: #dc2626;
+}
+
+.delete-history-count span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.delete-history-count small {
+    width: 100%;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   ERROR
+======================================== */
+
+.delete-history-error {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 15px 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.delete-history-error button {
+    border: none;
+    background: #dc2626;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.delete-history-error button:hover {
+    background: #b91c1c;
+}
+
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.delete-history-empty {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 70px 30px;
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.empty-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #dc2626;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+}
+
+.delete-history-empty h2 {
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.delete-history-empty p {
+    color: #6b7280;
+}
+
+
+/* ========================================
+   MAIN CARD
+======================================== */
+
+.delete-history-card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+
+/* ========================================
+   CARD HEADER
+======================================== */
+
+.delete-history-card-header {
+    padding: 24px 25px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.delete-history-card-header h2 {
+    margin: 0;
+    font-size: 21px;
+    color: #1f2937;
+}
+
+.delete-history-card-header p {
+    margin-top: 7px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ========================================
+   TABLE
+======================================== */
+
+.delete-history-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.delete-history-table-wrapper table {
+    width: 100%;
+    min-width: 1100px;
+    border-collapse: collapse;
+}
+
+.delete-history-table-wrapper th {
+    padding: 16px 18px;
+    text-align: left;
+    background: #f8fafc;
+
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.delete-history-table-wrapper td {
+    padding: 18px;
+    color: #374151;
+    font-size: 15px;
+
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.delete-history-table-wrapper tbody tr:hover {
+    background: #fafafa;
+}
+
+.delete-history-table-wrapper tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ========================================
+   TRANSACTION NAME
+======================================== */
+
+.deleted-transaction-name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.deleted-transaction-name strong {
+    color: #1f2937;
+    font-size: 16px;
+}
+
+.deleted-transaction-name span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   AMOUNTS
+======================================== */
+
+.history-income {
+    color: #16a34a !important;
+    font-size: 16px !important;
+    font-weight: 600;
+}
+
+.history-expense {
+    color: #dc2626 !important;
+    font-size: 16px !important;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   TYPE BADGES
+======================================== */
+
+.history-type {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.history-type.income {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.history-type.expense {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+
+/* ========================================
+   RECOVERY TIME
+======================================== */
+
+.recovery-time,
+.recovery-warning {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.recovery-time {
+    color: #2563eb;
+}
+
+.recovery-warning {
+    color: #dc2626;
+}
+
+
+/* ========================================
+   ACTION BUTTONS
+======================================== */
+
+.history-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.restore-btn,
+.permanent-delete-btn {
+    border: none;
+    padding: 9px 12px;
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.restore-btn {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.restore-btn:hover {
+    background: #bbf7d0;
+}
+
+.permanent-delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.permanent-delete-btn:hover {
+    background: #fecaca;
+}
+
+.restore-btn:disabled,
+.permanent-delete-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   LOADING
+======================================== */
+
+.delete-history-loading {
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #64748b;
+    font-size: 17px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .delete-history-page {
+        padding: 20px;
+    }
+
+    .delete-history-header {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .delete-history-header h1 {
+        font-size: 26px;
+    }
+
+    .delete-history-count {
+        min-width: 100px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .delete-history-page {
+        padding: 15px;
+    }
+
+    .delete-history-header {
+        flex-direction: column;
+    }
+
+    .delete-history-count {
+        width: 100%;
+    }
+
+    .delete-history-error {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .delete-history-empty {
+        padding: 50px 20px;
+    }
+
+    .delete-history-card-header {
+        padding: 20px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+    .delete-history-header h1 {
+        font-size: 23px;
+    }
+
+    .delete-history-header p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .delete-history-card-header h2 {
+        font-size: 18px;
+    }
+
+}

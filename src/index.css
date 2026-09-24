@@ -1,33 +1,46 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================================================
+   GLOBAL EDIT & DELETE ICON SIZE
+   Applies to Budget, Income, Expenses, Transactions,
+   Settings, Admin, and other pages
+========================================================= */
+
+.edit-btn,
+.delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
 
-html,
-body,
-#root{
-    width:100%;
-    min-height:100vh;
+/* Exact same icon size everywhere */
+.edit-btn svg,
+.delete-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    min-height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    flex-shrink: 0;
+    display: block;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f8f9fc;
-    overflow-x:hidden;
+/* Keep the same size in dark mode */
+body.dark-mode .edit-btn svg,
+body.dark-mode .delete-btn svg {
+    width: 18px !important;
+    height: 18px !important;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-button{
-    cursor:pointer;
-    font-family:inherit;
+/* Keep the same size on mobile */
+@media (max-width: 600px) {
+    .edit-btn svg,
+    .delete-btn svg {
+        width: 18px !important;
+        height: 18px !important;
+        min-width: 18px;
+        min-height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+    }
 }

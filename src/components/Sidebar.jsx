@@ -1,25 +1,37 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import {
     FaHome,
     FaMoneyBillWave,
-    FaWallet,
     FaExchangeAlt,
     FaChartBar,
     FaPiggyBank,
     FaCog,
-    FaSignOutAlt
+    FaSignOutAlt,
+    FaReceipt,
+    FaTrashRestore
 } from "react-icons/fa";
 
 function Sidebar() {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        // Remove logged-in user
+        localStorage.removeItem("loggedInUser");
+        localStorage.removeItem("isLoggedIn");
+
+        // Go to login page
+        navigate("/login");
+    };
+
     return (
         <aside className="sidebar">
 
-            {/* Logo */}
-            <div className="logo">
-                <FaWallet />
-                <h2>Finance</h2>
+            {/* FH Logo */}
+            <div className="fh-logo">
+                <span>F</span>
+                <span>H</span>
             </div>
 
             {/* Menu */}
@@ -36,7 +48,7 @@ function Sidebar() {
                 </NavLink>
 
                 <NavLink to="/expenses">
-                    <FaWallet />
+                    <FaReceipt />
                     <span>Expenses</span>
                 </NavLink>
 
@@ -45,7 +57,6 @@ function Sidebar() {
                     <span>Transactions</span>
                 </NavLink>
 
-                {/* Reports */}
                 <NavLink to="/reports">
                     <FaChartBar />
                     <span>Reports</span>
@@ -54,6 +65,11 @@ function Sidebar() {
                 <NavLink to="/budget">
                     <FaPiggyBank />
                     <span>Budget</span>
+                </NavLink>
+
+                <NavLink to="/delete-history">
+                    <FaTrashRestore />
+                    <span>Delete History</span>
                 </NavLink>
 
                 <NavLink to="/settings">
@@ -65,10 +81,10 @@ function Sidebar() {
 
             {/* Logout */}
             <div className="logout">
-                <NavLink to="/logout">
+                <button onClick={handleLogout}>
                     <FaSignOutAlt />
                     <span>Logout</span>
-                </NavLink>
+                </button>
             </div>
 
         </aside>
