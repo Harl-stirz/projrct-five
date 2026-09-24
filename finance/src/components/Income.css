@@ -1,0 +1,433 @@
+.income-page {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* Header */
+
+.income-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.income-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.income-header p {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+.add-income-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-income-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Cards */
+
+.income-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.income-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.income-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background: #e8f5ee;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.income-card p {
+  margin: 0 0 7px;
+  color: #6b7280;
+}
+
+.income-card h2 {
+  margin: 0 0 7px;
+  color: #111827;
+  font-size: 21px;
+}
+
+.income-card span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.income-card .positive {
+  color: #16a34a;
+}
+
+/* Sections */
+
+.income-section {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 20px;
+}
+
+.section-header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+}
+
+/* Sources */
+
+.sources-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.source {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.source h3 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.source p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.source strong {
+  color: #16a34a;
+}
+
+/* Search */
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  padding: 9px 12px;
+  border-radius: 8px;
+  width: 240px;
+}
+
+.search-box svg {
+  color: #9ca3af;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Table */
+
+.income-table-container {
+  overflow-x: auto;
+}
+
+.income-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.income-table th {
+  text-align: left;
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 13px;
+  padding: 15px;
+}
+
+.income-table td {
+  padding: 16px 15px;
+  border-bottom: 1px solid #eee;
+  color: #4b5563;
+}
+
+.income-table tr:hover {
+  background: #fafafa;
+}
+
+.amount {
+  color: #16a34a !important;
+  font-weight: 600;
+}
+
+.status {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.edit-btn {
+  color: #2563eb;
+}
+
+.delete-btn {
+  color: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  padding: 30px !important;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .income-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .sources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .income-page {
+    padding: 20px;
+  }
+
+  .income-header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   ADD INCOME FORM
+========================================= */
+
+.income-form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.income-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.income-form-header h2 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 20px;
+}
+
+.income-form-header p {
+    margin: 5px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.close-form-btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: #f3f4f6;
+    color: #6b7280;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-form-btn:hover {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+
+/* Form */
+
+.income-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.income-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.income-form .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.income-form input,
+.income-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.income-form input:focus,
+.income-form select:focus {
+    border-color: #2563eb;
+}
+
+
+/* Form Buttons */
+
+.income-form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.cancel-btn {
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #f3f4f6;
+}
+
+.save-income-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.save-income-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .income-form {
+        grid-template-columns: 1fr;
+    }
+
+    .income-form-actions {
+        flex-direction: column;
+    }
+
+    .cancel-btn,
+    .save-income-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.income-loading {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #64748b;
+    font-size: 17px;
+}

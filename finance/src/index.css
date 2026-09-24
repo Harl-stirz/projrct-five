@@ -1,0 +1,46 @@
+/* =========================================================
+   GLOBAL EDIT & DELETE ICON SIZE
+   Applies to Budget, Income, Expenses, Transactions,
+   Settings, Admin, and other pages
+========================================================= */
+
+.edit-btn,
+.delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Exact same icon size everywhere */
+.edit-btn svg,
+.delete-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    min-height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Keep the same size in dark mode */
+body.dark-mode .edit-btn svg,
+body.dark-mode .delete-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* Keep the same size on mobile */
+@media (max-width: 600px) {
+    .edit-btn svg,
+    .delete-btn svg {
+        width: 18px !important;
+        height: 18px !important;
+        min-width: 18px;
+        min-height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+    }
+}
